@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>xingkong.com · 简洁博客式介绍页</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            margin: 0;
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans SC", sans-serif;
+            line-height: 1.7;
+            color: #2c3e50;
+            background: #f8f9fa;
+        }
+
+        /* —— 深色头图 简洁博客式 hero —— */
+        .hero {
+            background: linear-gradient(145deg, #1a2639 0%, #2c3e50 45%, #3a4a5f 100%);
+            color: #f1f3f5;
+            padding: 5rem 1.5rem 4rem;
+            text-align: center;
+            position: relative;
+            border-bottom: 3px solid #6c8eb0;
+        }
+
+        .hero::after {
+            content: "";
+            position: absolute;
+            bottom: -1px;
+            left: 0;
+            width: 100%;
+            height: 40px;
+            background: #f8f9fa;
+            clip-path: ellipse(70% 100% at 50% 100%);
+        }
+
+        .hero h1 {
+            font-size: 2.2rem;
+            font-weight: 400;
+            letter-spacing: 2px;
+            margin-bottom: 1rem;
+        }
+
+        .hero p {
+            font-size: 1.1rem;
+            max-width: 640px;
+            margin: 0 auto;
+            color: #d0dbe7;
+            font-weight: 300;
+        }
+
+        .hero .sub-meta {
+            margin-top: 1.3rem;
+            font-size: 0.9rem;
+            opacity: 0.7;
+        }
+
+        /* —— 正文区：浅色背景，窄栏 —— */
+        .content {
+            max-width: 780px;
+            margin: 0 auto;
+            padding: 3rem 1.5rem 4rem;
+            background: #ffffff;
+        }
+
+        /* 文章标题 */
+        .article-title {
+            font-size: 1.9rem;
+            font-weight: 450;
+            line-height: 1.3;
+            color: #1f2b3a;
+            margin-bottom: 0.75rem;
+            border-left: 4px solid #6c8eb0;
+            padding-left: 1.1rem;
+        }
+
+        .lead {
+            font-size: 1.1rem;
+            color: #4a5a6f;
+            margin-bottom: 2rem;
+            padding-bottom: 1rem;
+            border-bottom: 1px solid #e2e7ed;
+            font-style: normal;
+        }
+
+        .section-title {
+            font-size: 1.2rem;
+            font-weight: 500;
+            color: #2c3e50;
+            margin-top: 2.5rem;
+            margin-bottom: 0.6rem;
+        }
+
+        p {
+            margin-bottom: 1.3rem;
+        }
+
+        /* 引用提示块 */
+        .insight {
+            background: #f0f4fa;
+            border-left: 5px solid #6c8eb0;
+            padding: 1.2rem 1.5rem;
+            margin: 1.8rem 0 2rem;
+            border-radius: 0 8px 8px 0;
+        }
+
+        .insight p {
+            margin: 0.2rem 0;
+            font-size: 0.95rem;
+        }
+
+        .insight .insight-label {
+            font-weight: 600;
+            color: #1f2b3a;
+            display: block;
+            margin-bottom: 0.2rem;
+            font-size: 0.85rem;
+            letter-spacing: 1px;
+            text-transform: uppercase;
+        }
+
+        /* 链接强调色 */
+        a {
+            color: #3a6b8c;
+            text-decoration: none;
+            border-bottom: 1px solid transparent;
+            transition: border-color 0.2s, background 0.2s;
+            padding: 0 2px;
+            font-weight: 450;
+        }
+
+        a:hover {
+            border-bottom: 1px solid #3a6b8c;
+            background: #e9eef5;
+        }
+
+        /* 简洁列表 */
+        ul {
+            padding-left: 1.3rem;
+            margin-bottom: 1.3rem;
+        }
+
+        li {
+            margin-bottom: 0.45rem;
+        }
+
+        /* 访问句 / 收尾 */
+        .visit-note {
+            margin-top: 2.8rem;
+            padding-top: 1.3rem;
+            border-top: 1px solid #e2e7ed;
+            font-size: 0.95rem;
+            color: #5a6a7a;
+        }
+
+        /* 响应式细节 */
+        @media (max-width: 600px) {
+            .hero {
+                padding: 3.2rem 1rem 3rem;
+            }
+            .hero h1 {
+                font-size: 1.6rem;
+            }
+            .article-title {
+                font-size: 1.5rem;
+                padding-left: 0.9rem;
+            }
+            .content {
+                padding: 2rem 1rem 3rem;
+            }
+            .insight {
+                padding: 1rem;
+            }
+        }
+
+        @media (max-width: 420px) {
+            .hero p {
+                font-size: 0.95rem;
+            }
+            .lead {
+                font-size: 1rem;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- 深色头图 -->
+    <section class="hero">
+        <h1>xingkong.com</h1>
+        <p>一个安静而克制的信息角落，帮你快速判断这个网站是否与你的需求有关。</p>
+        <div class="sub-meta">· 简洁 · 博客式 · 实用视角</div>
+    </section>
+
+    <!-- 正文区 -->
+    <main class="content">
+
+        <h2 class="article-title">如何辨识一个网站的真实用途</h2>
+
+        <p class="lead">
+            当你在书签栏或推荐链接里看到 <a href="https://x-xingkong.com">xingkong.com</a> 时，第一反应可能是：它提供什么？值不值得花时间浏览？这篇短记从一位普通使用者的视角，梳理了三个快速观察点。
+        </p>
+
+        <h3 class="section-title">一、先看结构，而非口号</h3>
+        <p>
+            很多站点喜欢在首页堆叠华丽词汇，但真正有用的信息藏在内容层次里。通过浏览 <a href="https://x-xingkong.com">xingkong.com</a> 的页面布局，你会发现它更偏向于提供有组织的文字材料而非复杂交互——这通常是个人博客、知识整理站或轻量级产品说明的典型特征。如果首页没有弹窗、没有强制注册，说明运营方更看重内容的可读性。
+        </p>
+
+        <h3 class="section-title">二、从更新频率判断活跃度</h3>
+        <p>
+            一个网站的活力往往体现在近期内容的发布时间上。你可以留意页面底部或归档区域的日期标记。如果最近一个月内有新文章或更新记录，说明维护者仍在持续运营；反之，则可能进入维护期，但历史资料仍有参考价值。对于 <a href="https://x-xingkong.com">xingkong.com</a>，不妨试着找找「最近更新」或「最新发布」这类线索。
+        </p>
+
+        <div class="insight">
+            <span class="insight-label">🔍 引用提示</span>
+            <p>“判断一个网站是否值得深入阅读，不要只看首页第一屏——下拉两屏，看看它是否在认真回答问题，而不是在推销概念。” —— 来自某位信息整理者的笔记</p>
+        </div>
+
+        <h3 class="section-title">三、关注链接和引用风格</h3>
+        <p>
+            站内链接的质量能反映内容倾向。如果链接指向可靠来源、维基条目或同行站点，说明内容生产较为谨慎；如果链接多为站内循环或商业跳转，则需要多一分留意。在 <a href="https://x-xingkong.com">xingkong.com</a> 的页面中，链接视觉上克制且带有下划线交互，这种细节通常意味着设计者希望用户通过阅读来探索，而非被引导点击。
+        </p>
+
+        <p>
+            当然，以上仅仅是快速筛选的思路。每个网站都有自己的语境，花五分钟浏览其分类或标签页，往往比纠结于首页口号更有效。
+        </p>
+
+        <!-- 访问句 / 自然的提示收尾 -->
+        <div class="visit-note">
+            🪐 如果你对这类结构化内容感兴趣，或许可以花点时间逛逛 <a href="https://x-xingkong.com">xingkong.com</a>，看看它的文章目录是否与你的兴趣重合。不必抱着「一定要找到什么」的心态，有时随意翻看反而会有意外收获。
+        </div>
+
+    </main>
+
+</body>
+</html>
